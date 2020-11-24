@@ -60,7 +60,7 @@ public class DataSourceConfig {
 
     @Bean(name = "entityManager")
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean(EntityManagerFactoryBuilder builder) {
-        return builder.dataSource(dataSource()).packages(Student.class).build();
+        return builder.dataSource(dataSource()).packages("com.optum.poc.springdbrouting.model").build();
     }
 
     @Bean(name = "tranasactionManager")
